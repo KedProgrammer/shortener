@@ -1,0 +1,34 @@
+<div class="container">
+	<div class="row justify-content-center mt-5">
+		<div class="col-12">
+			<%= form_for (@url), remote: true  do |f|%>
+			<div class="form-group">
+        		<%= f.label 'Simplify links' %>
+            	<%= f.text_field :basicUrl, class: 'form-control'%>
+          	</div>
+          	<div class="form-group">
+        		<%= f.submit "Shorten url", class:'btn btn-primary boton-login' %>
+          	</div>
+		<%end%>
+		</div>
+	</div>
+	<div class="row justify-content-center mt-5">
+		<table class="table">
+	  <thead>
+	    <tr>
+	      <th scope="col">Original</th>
+	      <th scope="col">Created</th>
+	      <th scope="col">LShort Url</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <th scope="row">1</th>
+	      <td>Mark</td>
+	      <td>Otto</td>
+	      <td>@mdo</td>
+	    </tr>
+	  </tbody>
+	</table>
+	</div>
+</div>
