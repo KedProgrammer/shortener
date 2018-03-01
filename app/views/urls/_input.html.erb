@@ -2,7 +2,7 @@
 	<%= form_for (@url), remote: true  do |f|%>
 		<div class="form-group">
       <%= f.label 'Simplify links' %>
-      <%= f.text_field :basicUrl, class: 'form-control'%>
+      <%= f.text_field :basicUrl, placeholder: "Input url", class: 'form-control'%>
       </div>
       <div class="form-group">
       <%= f.submit "Shorten url", class:'btn btn-primary boton-login' %>

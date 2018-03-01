@@ -6,5 +6,7 @@
 <% else %>
 	$('.errors').remove()
 	$('tbody').html("<%= j (render 'table') %>");
+	$('.modal-content').html("<%=  j (render 'modal') %>")
+	$('#exampleModal').modal()
 	
 <% end %>

@@ -1,6 +1,6 @@
 class Url < ApplicationRecord
 	before_save :create_url
-	validates :basicUrl, :presence => { :message => " cannot be blank" }
+	validates :basicUrl, presence: true
 
 	private
 	def create_url
