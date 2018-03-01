@@ -9,9 +9,9 @@ class UrlsController < ApplicationController
         format.js 
         end
 		@url = Url.new(url_params)
-		@url.save
+		if @url.save
 		@urls = Url.all
-
+		end
 	end
 
 	def show

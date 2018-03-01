@@ -1,0 +1,12 @@
+<div class="errors">
+  <div class="alert alert-danger">
+          The form contains  <%= pluralize(@url.errors.count,"error") %>
+  </div>
+    <div>
+      <% @url.errors.full_messages.each do |f| %>
+        <ul>
+          <li><%= f %></li>
+        </ul>
+      <% end %>
+    </div>
+</div>
