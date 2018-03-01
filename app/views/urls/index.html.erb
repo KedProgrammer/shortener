@@ -1,26 +1,18 @@
 <div class="container">
-	<div class="row justify-content-center mt-5">
-		<div class="col-12">
-			<%= form_for (@url), remote: true  do |f|%>
-			<div class="form-group">
-        		<%= f.label 'Simplify links' %>
-            	<%= f.text_field :basicUrl, class: 'form-control'%>
-          	</div>
-          	<div class="form-group">
-        		<%= f.submit "Shorten url", class:'btn btn-primary boton-login' %>
-          	</div>
-		<%end%>
-		</div>
+	<div class="row justify-content-center mt-5 main">
+		<%= render 'input' %>
 	</div>
 	<div class="row justify-content-center mt-5">
 		<table class="table">
-	  <thead>
-	    <tr>
-	      <%=render 'table' %>
-	    </tr>
-	  </thead>
-	  <tbody>
-	  </tbody>
-	</table>
+	 		<thead>
+	    		<tr>
+	    		<th scope="col">Original Url</th>
+      			<th scope="col">Created</th>
+      			<th scope="col">Short Url</th>
+	  		</thead>
+	 		<tbody>
+	  	 		<%=render 'table' %>
+	  		</tbody>
+		</table>
 	</div>
 </div>

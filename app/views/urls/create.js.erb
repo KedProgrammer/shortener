@@ -1,3 +1,9 @@
 
 
-$('tbody').html("<%= j (render 'table') %>");
+<% if @url.errors.any? %>
+	$('.errors').remove()
+	$('.main').prepend("<%= j (render 'errors') %>");
+<% else %>
+	$('tbody').html("<%= j (render 'table') %>");
+	
+<% end %>
