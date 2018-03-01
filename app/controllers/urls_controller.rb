@@ -9,6 +9,7 @@ class UrlsController < ApplicationController
         end
 		@url = Url.new(url_params)
 		@url.save
+		@urls = Url.all
 
 	end
 
@@ -16,6 +17,5 @@ class UrlsController < ApplicationController
 
 	def url_params
 		params.require(:url).permit(:basicUrl)
-		
 	end
 end
