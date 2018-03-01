@@ -1,6 +1,7 @@
 class UrlsController < ApplicationController
 	def index
 		@url = Url.new
+		@urls = Url.all
 	end
 
 	def create
@@ -12,6 +13,13 @@ class UrlsController < ApplicationController
 		@urls = Url.all
 
 	end
+
+	def show
+		@url = Url.find(params[:id])
+		redirect_to "http://#{@url.basicUrl}"
+		
+	end
+
 
 	private
 

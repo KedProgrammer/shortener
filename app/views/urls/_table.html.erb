@@ -2,6 +2,6 @@
 	<tr>
       <td><%=t.basicUrl%></td>
       <td><%=t.created_at%></td>
-      <td><%=t.newUrl%></td>
+      <td><%=link_to t.newUrl, url_path(t)%></td>
     </tr>
 <%end%>
